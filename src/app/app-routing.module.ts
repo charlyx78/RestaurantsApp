@@ -6,6 +6,11 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'first-page',
+    pathMatch: 'full'
+  },
   { path: 'first-page', component: FirstPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
