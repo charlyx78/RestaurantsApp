@@ -6,6 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // formattedAddress='';
+
+  // // options = {
+  // //   componentRestrictions : {
+  // //     country: ['MX']
+  // //   }
+  // // }
+
+  // public handleAddressChange(address: any) {
+  //   this.formattedAddress = address.formattedAddress;
+  // }
+
   title = 'restaurantsApp'
   
   constructor() {}

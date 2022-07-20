@@ -4,16 +4,22 @@
         <div class="card-body">
             <h1 class="mb-5"><i class="bi bi-arrow-left" style="cursor: pointer;" [routerLink]="['/first-page']"></i> Register</h1>
             <form>
+              <div class="form-group mb-3">
+                <label for="inputName" class="mb-1">Restaurant name</label>
+                <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter restaurant name">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="inputAdress" class="mb-1">Adress</label>
+                <input type="text" class=" form-control" id="inputAdress" ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+                <p>{{formattedAddress}}</p>
+              </div>
+
               <div class="row">
-                <div class="col">
-                  <div class="form-group mb-3">
-                    <label for="inputName" class="mb-1">Restaurant name</label>
-                    <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter restaurant name">
-                  </div>
-                </div>
                 <div class="col">
                   <label for="formCategorySelect" class="mb-1">Restaurant category</label>
                   <select class="form-control mb-3" id="formCategorySelect">
+                    <option selected="selected" disabled>--Select a category</option>
                     <option>American</option>
                     <option>Breakfast and brunch</option>
                     <option>Chinese</option>
@@ -32,17 +38,13 @@
                     <option>Others</option>
                   </select>
                 </div>
+                <div class="col">
+                  <div class="form-group mb-3">
+                    <label for="inputPhone" class="mb-1">Phone</label>
+                    <input type="tel" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter phone contact">
+                  </div>
+                </div>
               </div>
-
-                <div class="form-group mb-3">
-                  <label for="inputPhone" class="mb-1">Phone</label>
-                  <input type="tel" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter phone contact">
-                </div>
-
-                <div class="form-group mb-3">
-                  <label for="inputAdress" class="mb-1">Adress</label>
-                  <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter restaurant adress">
-                </div>
 
                 <div class="form-group mb-3">
                   <label for="inputEmail" class="mb-1">Email address</label>
@@ -63,10 +65,11 @@
                     </div>
                   </div>
                 </div>
-          
-                <button type="submit" class="w-100 btn btn-dark btn-block" [routerLink]="['/home']">Register</button>
+
+                <button type="submit" class="w-100 btn btn-dark btn-block" [routerLink]="['/register-adress']">Next</button>
               </form>
         </div>
     </div>
 </div>
+
 </body>

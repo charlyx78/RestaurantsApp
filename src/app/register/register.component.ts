@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  formattedAddress='';
+
+  // options = {
+  //   componentRestrictions : {
+  //     country: ['MX']
+  //   }
+  // }
+
+  public handleAddressChange(address: any) {
+    this.formattedAddress = address.formattedAddress;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
