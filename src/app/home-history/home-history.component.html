@@ -6,9 +6,9 @@
         <div class="menu">
             <h4 class="text-light p-2">Orders</h4>
             <a [routerLink]="['/home']" class="d-flex p-3 text-light align-items-center"><i class="bi bi-clipboard2-fill"></i>Incoming</a>
-            <a [routerLink]="['/home-preparing']" class="d-flex p-3 text-light active align-items-center"><i class="bi bi-fire"></i>Preparing</a>
+            <a [routerLink]="['/home-preparing']" class="d-flex p-3 text-light align-items-center"><i class="bi bi-fire"></i>Preparing</a>
             <a [routerLink]="['/home-ready']" class="d-flex p-3 text-light align-items-center"><i class="bi bi-clipboard2-check-fill"></i>Ready</a>
-            <a [routerLink]="['/home-history']" class="d-flex p-3 text-light align-items-center"><i class="bi bi-clock-fill"></i>History</a>
+            <a [routerLink]="['/home-history']" class="d-flex p-3 active text-light align-items-center"><i class="bi bi-clock-fill"></i>History</a>
         </div>
     </div>
 
@@ -46,9 +46,9 @@
                           <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                               <div class="row">
-                                <div class="col-6"><strong>Carlos Ruiz</strong></div> <!--nombre-->
-                                <div class="col-6">28/09/2022</div> <!--fecha de reservacion-->
-                                <div class="col-8 mt-1"> 56VDAR</div> <!--id de reservacion-->
+                                <div class="col-6"><strong>Melany Arleth</strong></div> <!--nombre-->
+                                <div class="col-6">09/10/2022</div> <!--fecha de reservacion-->
+                                <div class="col-8 mt-1"> 63FRWA</div> <!--id de reservacion-->
                               </div>
                             </button>
                           </h2>
@@ -65,18 +65,19 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Buffalo crisper</td>
-                                        <td>$210</td>
+                                        <td>Mushroom burger</td>
+                                        <td>$185</td>
                                     </tr>
                                     <tr class="total">
                                         <td></td>
                                         <td><strong>Total</strong></td>
-                                        <td><strong>$210</strong></td>
+                                        <td><strong>$185</strong></td>
                                     </tr>
                                 </tbody>
                               </table>
                                 <div class="botones">
-                                    <button type="button" class="w-100 btn btn-dark">Ready to go</button>
+                                    <button type="button" class="btn btn-dark">Cancel</button>
+                                    <button type="button" class="btn btn-dark">Confirm</button>
                                 </div>
                             </div>
                           </div>

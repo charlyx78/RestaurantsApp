@@ -5,8 +5,12 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { HomePreparingComponent } from './home-preparing/home-preparing.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { RegisterImagesComponent } from './register-images/register-images.component';
+import { HomeReadyComponent } from './home-ready/home-ready.component';
+import { HomeHistoryComponent } from './home-history/home-history.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +19,17 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     HomeComponent,
     RegisterComponent,
     HomePreparingComponent,
+    RegisterImagesComponent,
+    HomeReadyComponent,
+    HomeHistoryComponent,
+    MenuComponent,
   ],
   imports: [
     AppRoutingModule,
     GooglePlaceModule,
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
