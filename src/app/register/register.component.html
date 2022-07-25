@@ -7,19 +7,19 @@
             <form [formGroup]="formularioRegistroRestaurante">
               <div class="form-group mb-3">
                 <label for="inputName" class="mb-1">Restaurant name</label>
-                <input type="text" class="form-control" formControlName="nombre" aria-describedby="nameHelp" placeholder="Enter restaurant name">
+                <input type="text" class="form-control" formControlName="nameRestaurant" aria-describedby="nameHelp" placeholder="Enter restaurant name">
               </div>
 
               <div class="form-group mb-3">
                 <label for="inputAdress" class="mb-1">Adress</label>
-                <input type="text" class="form-control" formControlName="direccion" ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+                <input type="text" class="form-control" formControlName="address" ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
                 <p>{{formattedAddress}}</p>
               </div>
 
               <div class="row">
                 <div class="col">
                   <label for="selectCategory" class="mb-1">Restaurant category</label>
-                  <select class="form-control mb-3" formControlName="categoria">
+                  <select class="form-control mb-3" formControlName="rType">
                     <option selected="selected" disabled>--Select a category</option>
                     <option>American</option>
                     <option>Breakfast and brunch</option>
@@ -42,7 +42,7 @@
                 <div class="col">
                   <div class="form-group mb-3">
                     <label for="inputPhone" class="mb-1">Phone</label>
-                    <input type="tel" class="form-control" formControlName="telefono" aria-describedby="phoneHelp" placeholder="Enter phone contact">
+                    <input type="tel" class="form-control" formControlName="phone" aria-describedby="phoneHelp" placeholder="Enter phone contact">
                   </div>
                 </div>
               </div>
@@ -51,33 +51,33 @@
                 <div class="col">
                   <div class="form-group mb-3">
                     <label for="inputOpeningHour" class="mb-1">Opening hour</label>
-                    <input type="time" class="form-control" formControlName="apertura" aria-describedby="openingHourHelp" placeholder="Enter opening hour">
+                    <input type="time" class="form-control" formControlName="openLocal" aria-describedby="openingHourHelp" placeholder="Enter opening hour">
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group mb-3">
                     <label for="inputClosingTime" class="mb-1">Closing hour</label>
-                    <input type="time" class="form-control" formControlName="clausura" aria-describedby="colsingTimeHelp" placeholder="Enter closing hour">
+                    <input type="time" class="form-control" formControlName="closeLocal" aria-describedby="colsingTimeHelp" placeholder="Enter closing hour">
                   </div>
                 </div>
               </div>
 
                 <div class="form-group mb-3">
                   <label for="inputEmail" class="mb-1">Email address</label>
-                  <input type="email" class="form-control" formControlName="correo" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
 
                 <div class="row">
                   <div class="col">
                     <div class="form-group mb-3">
                       <label for="inputPassword" class="mb-1">Password</label>
-                      <input type="password" class="form-control" formControlName="contraseña" placeholder="Password">
+                      <input type="password" class="form-control" formControlName="password" placeholder="Password">
                     </div>               
                   </div>
                   <div class="col">
                     <div class="form-group mb-3">
                       <label for="inputConfirmPassword" class="mb-1">Confirm password</label>
-                      <input type="password" class="form-control" formControlName="ccontraseña" placeholder="Confirm password">
+                      <input type="password" class="form-control" formControlName="confirmacionPassword" placeholder="Confirm password">
                     </div>
                   </div>
                 </div>
