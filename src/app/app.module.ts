@@ -7,7 +7,6 @@ import { RegisterComponent } from './register/register.component';
 import { HomePreparingComponent } from './home-preparing/home-preparing.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
-import { RegisterImagesComponent } from './register-images/register-images.component';
 import { HomeReadyComponent } from './home-ready/home-ready.component';
 import { HomeHistoryComponent } from './home-history/home-history.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,7 +18,6 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     RegisterComponent,
     HomePreparingComponent,
-    RegisterImagesComponent,
     HomeReadyComponent,
     HomeHistoryComponent,
     MenuComponent,

@@ -25,9 +25,10 @@ export class MenuComponent implements OnInit {
     let section = {
       sectionName: f.sectionName,
     }
+
     console.log(section.sectionName);
 
-    let text = section.sectionName;
+    var text = section.sectionName;
     text = document.getElementById('sections-container')?.innerHTML;
   }
 

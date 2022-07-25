@@ -6,13 +6,11 @@ import { HomePreparingComponent } from './home-preparing/home-preparing.componen
 import { HomeReadyComponent } from './home-ready/home-ready.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-import { RegisterImagesComponent } from './register-images/register-images.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: 'first-page', component: FirstPageComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'register-images', component: RegisterImagesComponent },
   { path: 'home', component: HomeComponent },
   { path: 'home-preparing', component: HomePreparingComponent },
   { path: 'home-ready', component: HomeReadyComponent },
