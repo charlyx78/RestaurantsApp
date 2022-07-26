@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { ApiService } from '../service.service';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
