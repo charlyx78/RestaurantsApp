@@ -100,14 +100,14 @@ export class RegisterComponent implements OnInit {
       confirmacionPassword: f.confirmacionPassword,
       type:'restaurant'
     }    
-    this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
-      let responseLocal;
-      responseLocal = responseFromTheServer;
-    })    
-    this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
-      let responseLocal;
-      responseLocal = responseFromTheServer;
-    })  
+    // this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
+    //   let responseLocal;
+    //   responseLocal = responseFromTheServer;
+    // })    
+    // this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
+    //   let responseLocal;
+    //   responseLocal = responseFromTheServer;
+    // })  
   }
 
   ngOnInit(): void {
