@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
   logoImg: any;
   coverImg: any;
   dataImg: any;
+
   public handleAddressChange(address: Address) {
     this.formattedAddress = address.formatted_address;
     this.lat = address.geometry.location.lat();
@@ -28,6 +29,7 @@ export class RegisterComponent implements OnInit {
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
   }
+  
   registerRestaurantForm: FormGroup;
   constructor(private api:ApiService, public fb: FormBuilder) {
     this.registerRestaurantForm = new FormGroup({
