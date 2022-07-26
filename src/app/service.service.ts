@@ -18,29 +18,29 @@ export class ApiService {
       withCredentials?: boolean,
     }
 
-  public postImages(data:any){
-    try {
-      return this.http.post('http://74.208.181.113:3000/api/upload',data);
-    } catch (error) {
-      console.log('Error cause is:',error);
-    }}
+  // public postImages(data:any){
+  //   try {
+  //     return this.http.post('http://74.208.181.113:3000/api/upload',data);
+  //   } catch (error) {
+  //     console.log('Error cause is:',error);
+  //   }}
 
-    public restaurantPost(dataRestaurant:any){
-      try {
-        return this.http.post('http://74.208.181.113:3000/api/restaurants',dataRestaurant);
-      } catch (error) {
-        console.log('Error cause is:',error);
-      }
-    }
+  //   public restaurantPost(dataRestaurant:any){
+  //     try {
+  //       return this.http.post('http://74.208.181.113:3000/api/restaurants',dataRestaurant);
+  //     } catch (error) {
+  //       console.log('Error cause is:',error);
+  //     }
+  //   }
 
 
-  public userPostRegister(user:any){
-    try {
-      return this.http.post('http://74.208.181.113:3000/api/user/Register',user);
+  // public userPostRegister(user:any){
+  //   try {
+  //     return this.http.post('http://74.208.181.113:3000/api/user/Register',user);
 
-    } catch (error) {
+  //   } catch (error) {
 
-      console.log('Error cause is:',error);
-    }
-  }
+  //     console.log('Error cause is:',error);
+  //   }
+  // }
 }
