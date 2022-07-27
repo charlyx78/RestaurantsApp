@@ -68,10 +68,10 @@ export class RegisterComponent implements OnInit {
   upload(){
     const data = new FormData();
     data.append('usrimage',this.dataImg.fileRaw)
-    // this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
-    //   let resposeLocal;
-    //   resposeFromTheServer = resposeLocal
-    // })
+    this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
+      let resposeLocal;
+      resposeFromTheServer = resposeLocal
+    })
   }
   guardar(){
     let f = this.registerRestaurantForm.value;
@@ -97,14 +97,14 @@ export class RegisterComponent implements OnInit {
       confirmacionPassword: f.confirmacionPassword,
       type:'restaurant'
     }
-    // this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
-    //   let responseLocal;
-    //   responseLocal = responseFromTheServer;
-    // })
-    // this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
-    //   let responseLocal;
-    //   responseLocal = responseFromTheServer;
-    // })
+    this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
+      let responseLocal;
+      responseLocal = responseFromTheServer;
+    })
+    this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
+      let responseLocal;
+      responseLocal = responseFromTheServer;
+    })
   }
   ngOnInit(): void {
   }
