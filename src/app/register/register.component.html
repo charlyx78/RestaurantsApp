@@ -4,7 +4,7 @@
     <div class="card w-50 pt-4 pb-4">
         <div class="card-body">
             <h1 class="mb-5"><i class="bi bi-arrow-left" style="cursor: pointer;" [routerLink]="['/first-page']"></i> Register</h1>
-            <form [formGroup]="formularioRegistroRestaurante">
+            <form [formGroup]="registerRestaurantForm">
               <div class="form-group mb-3">
                 <label for="inputName" class="mb-1">Restaurant name</label>
                 <input type="text" class="form-control" formControlName="nameRestaurant" aria-describedby="nameHelp" placeholder="Enter restaurant name">
@@ -67,35 +67,32 @@
                   <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
 
-                <div class="row">
-                  <div class="col">
-                    <div class="form-group mb-3">
-                      <label for="inputPassword" class="mb-1">Password</label>
-                      <input type="password" class="form-control" formControlName="password" placeholder="Password">
-                    </div>               
-                  </div>
-                  <div class="col">
-                    <div class="form-group mb-3">
-                      <label for="inputConfirmPassword" class="mb-1">Confirm password</label>
-                      <input type="password" class="form-control" formControlName="confirmacionPassword" placeholder="Confirm password">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-group mb-3">
+                        <label for="inputPassword" class="mb-1">Password</label>
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                      </div>               
+                    </div>
+                    <div class="col">
+                      <div class="form-group mb-3">
+                        <label for="inputConfirmPassword" class="mb-1">Confirm password</label>
+                        <input type="password" class="form-control" formControlName="confirmacionPassword" placeholder="Confirm password">
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="form-group mb-3">
-                  <label for="inputName" class="mb-1">Restaurant logo</label>
-                  <input type="file" class="form-control" (change)="onFile($event)" aria-describedby="emailHelp">
-                </div>
-  
-                <div class="form-group mb-5">
-                  <label for="inputName" class="mb-1">Restaurant cover</label>
-                  <input type="file" class="form-control" (change)="onFile2($event)" aria-describedby="emailHelp">
-                </div>
-
-                <button type="submit" class="w-100 btn btn-dark btn-block" [routerLink]="['/home']" (click)="guardar()">Next</button>
-              </form>
-        </div>
-    </div>
-</div>
-
-</body>
+                  <div class="form-group mb-3">
+                    <label for="inputName" class="mb-1">Restaurant logo</label>
+                    <input type="file" class="form-control" (change)="onFile($event)" aria-describedby="emailHelp">
+                  </div>
+    
+                  <div class="form-group mb-5">
+                    <label for="inputName" class="mb-1">Restaurant cover</label>
+                    <input type="file" class="form-control" (change)="onFile2($event)" aria-describedby="emailHelp">
+                  </div>
+                  <button type="submit" class="w-100 btn btn-dark btn-block" [routerLink]="['/home']" (click)="guardar()">Next</button>
+                </form>
+          </div>
+      </div>
+  </div>
+  </body>

@@ -5,6 +5,7 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
+import { ApiService } from '../service.service';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 
 @Component({
@@ -13,7 +14,6 @@ import { Address } from 'ngx-google-places-autocomplete/objects/address';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   formattedAddress='';
   public lat:any;
   public lng:any;
@@ -29,10 +29,9 @@ export class RegisterComponent implements OnInit {
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
   }
-
+  
   registerRestaurantForm: FormGroup;
-
-  constructor(public fb: FormBuilder) { 
+  constructor(private api:ApiService, public fb: FormBuilder) {
     this.registerRestaurantForm = new FormGroup({
       nameRestaurant:new FormControl('',Validators.required),
       address: new FormControl('',Validators.required),
@@ -50,7 +49,6 @@ export class RegisterComponent implements OnInit {
       confirmacionPassword: new FormControl('',Validators.required),
   })
 }
-
   onFile(event: any): void {
     console.log(event);
     const [file] = event.target.files;
@@ -69,13 +67,12 @@ export class RegisterComponent implements OnInit {
   }
   upload(){
     const data = new FormData();
-    data.append('usrimage',this.dataImg.fileRaw)    
-    this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
-      let resposeLocal;
-      resposeFromTheServer = resposeLocal    
-    })  
+    data.append('usrimage',this.dataImg.fileRaw)
+    // this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
+    //   let resposeLocal;
+    //   resposeFromTheServer = resposeLocal
+    // })
   }
-
   guardar(){
     let f = this.registerRestaurantForm.value;
     let dataRes = {
@@ -90,7 +87,7 @@ export class RegisterComponent implements OnInit {
       shortDescription:f.shortDescription,
       longDescription:f.longDescription,
       img:this.dataImg.fileName,
-    }    
+    }
     let dataReg = {
       nombre: f.nombreRestaurant,
       password: f.password,
@@ -99,18 +96,16 @@ export class RegisterComponent implements OnInit {
       phone: f.phone,
       confirmacionPassword: f.confirmacionPassword,
       type:'restaurant'
-    }    
+    }
     // this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
     //   let responseLocal;
     //   responseLocal = responseFromTheServer;
-    // })    
+    // })
     // this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
     //   let responseLocal;
     //   responseLocal = responseFromTheServer;
-    // })  
+    // })
   }
-
   ngOnInit(): void {
   }
-
 }
