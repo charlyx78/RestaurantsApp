@@ -12,6 +12,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { HomeReadyComponent } from './home-ready/home-ready.component';
 import { HomeHistoryComponent } from './home-history/home-history.component';
 import { MenuComponent } from './menu/menu.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MenuComponent } from './menu/menu.component';
     HomeReadyComponent,
     HomeHistoryComponent,
     MenuComponent,
+    AccountComponent,
   ],
   imports: [
     AppRoutingModule,

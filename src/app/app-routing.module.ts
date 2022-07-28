@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountComponent } from './account/account.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { HomeHistoryComponent } from './home-history/home-history.component';
 import { HomePreparingComponent } from './home-preparing/home-preparing.component';
@@ -10,7 +11,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'first-page',
     redirectTo: 'first-page',
     pathMatch: 'full'
   },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'home-ready', component: HomeReadyComponent },
   { path: 'home-history', component: HomeHistoryComponent },
   { path: 'menu', component: MenuComponent },
+  { path: 'account', component: AccountComponent },
 ];
 
 @NgModule({

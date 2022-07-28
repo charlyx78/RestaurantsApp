@@ -26,8 +26,8 @@
                       John Ham's
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Account</a></li>
-                      <li><a class="dropdown-item" href="#">Menu</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/account']">Account</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/menu']">Menu</a></li>
                       <li><a class="dropdown-item text-danger" [routerLink]="['/first-page']">Log out</a></li>
                     </ul>
                   </li>
@@ -75,10 +75,6 @@
                                     </tr>
                                 </tbody>
                               </table>
-                                <div class="botones">
-                                    <button type="button" class="btn btn-dark">Cancel</button>
-                                    <button type="button" class="btn btn-dark">Confirm</button>
-                                </div>
                             </div>
                           </div>
                         </div>
