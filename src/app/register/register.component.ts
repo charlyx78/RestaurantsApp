@@ -67,11 +67,17 @@ export class RegisterComponent implements OnInit {
   }
   upload(){
     const data = new FormData();
-    data.append('usrimage',this.dataImg.fileRaw)
-    // this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
-    //   let resposeLocal;
-    //   resposeFromTheServer = resposeLocal
-    // })
+    data.append('usrimage',this.coverImg.fileRaw)
+    this.api.postImages(data)?.subscribe((resposeFromTheServer:any)=>{
+      let resposeLocal;
+      resposeFromTheServer = resposeLocal
+    })
+    const data2 = new FormData();
+    data.append('usrimage',this.logoImg.fileRaw)
+    this.api.postImages(data2)?.subscribe((resposeFromTheServer:any)=>{
+      let resposeLocal;
+      resposeFromTheServer = resposeLocal
+    })
   }
   guardar(){
     let f = this.registerRestaurantForm.value;
@@ -86,10 +92,11 @@ export class RegisterComponent implements OnInit {
       lng:this.lng,
       shortDescription:f.shortDescription,
       longDescription:f.longDescription,
-      img:this.dataImg.fileName,
+      img:this.logoImg.fileName,
+      imgCover:this.coverImg.fileName,
     }
     let dataReg = {
-      nombre: f.nombreRestaurant,
+      nameRestaurant: f.nameRestaurant,
       password: f.password,
       address: f.address,
       email: f.email,
@@ -97,14 +104,15 @@ export class RegisterComponent implements OnInit {
       confirmacionPassword: f.confirmacionPassword,
       type:'restaurant'
     }
-    // this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
-    //   let responseLocal;
-    //   responseLocal = responseFromTheServer;
-    // })
-    // this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
-    //   let responseLocal;
-    //   responseLocal = responseFromTheServer;
-    // })
+    this.api.restaurantPost(dataRes)?.subscribe((responseFromTheServer:any)=>{
+      let responseLocal;
+      responseLocal = responseFromTheServer;
+    })
+    this.api.userPostRegister(dataReg)?.subscribe((responseFromTheServer:any)=>{
+      let responseLocal;
+      responseLocal = responseFromTheServer;
+    })
+    this.upload();
   }
   ngOnInit(): void {
   }
